@@ -37,8 +37,8 @@ app.get('/compose', function(req, res) {
 
 app.post('/compose', function(req, res) {
 
-    let content = req.body.postContent;
-    console.log(content);
+    console.log(req.body.post.title);
+    console.log(req.body.post.content);
 });
 
 
