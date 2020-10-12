@@ -53,6 +53,7 @@ app.get('/posts/:title', function(req, res) {
 
 app.post('/compose', function(req, res) {
 
+	req.body.post.url = _.kebabCase(req.body.post.title);
     posts.push(req.body.post);
     res.redirect('/');
 });
